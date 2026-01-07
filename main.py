@@ -4,11 +4,11 @@ import os
 from datetime import datetime
 
 # Configuración
-WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL", "https://discord.com/api/webhooks/1458411931022000277/YmbWLpOROBF1Yi1rXBbxLmrAZB99vbrk5EEQ15QOdASnOnIYWltO8Lzon3LQz-LwW34W")
+WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL", "")
 INTERVALO_HORAS = 6
 
 # Mensaje a enviar
-MENSAJE = "@owner recuerda hacer up https://discord.com/channels/934267676354834442/1361039833765646406"
+MENSAJE = "<@&1360269409884831855> recuerda hacer up https://discord.com/channels/934267676354834442/1361039833765646406"
 
 
 def enviar_mensaje():

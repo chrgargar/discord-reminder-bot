@@ -14,4 +14,4 @@ jobs:
         run: |
           curl -X POST "${{ secrets.DISCORD_WEBHOOK_URL }}" \
             -H "Content-Type: application/json" \
-            -d '{"content": "@owner recuerda hacer up https://discord.com/channels/934267676354834442/1361039833765646406", "username": "Recordatorio Bot"}'
+            -d '{"content": "<@&1360269409884831855> recuerda hacer up https://discord.com/channels/934267676354834442/1361039833765646406", "username": "Recordatorio Bot"}'
