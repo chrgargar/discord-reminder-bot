@@ -1,0 +1,17 @@
+name: Discord Reminder
+
+on:
+  schedule:
+    # Ejecutar cada 6 horas (00:00, 06:00, 12:00, 18:00 UTC)
+    - cron: '0 */6 * * *'
+  workflow_dispatch:  # Permite ejecutar manualmente
+
+jobs:
+  send-reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord message
+        run: |
+          curl -X POST "${{ secrets.DISCORD_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{"content": "@owner recuerda hacer up https://discord.com/channels/934267676354834442/1361039833765646406", "username": "Recordatorio Bot"}'
